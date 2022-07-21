@@ -27,10 +27,11 @@
                 <tr>
                     <td><label for="title">ID</label></td>
                     <td><label for="title">Name</label></td>
+                    <td><label for="title">Term</label></td>
                     @foreach($subjects as $key => $subject)
                     <td><label for="title">{{ $subject }}</label></td>
                     @endforeach
-                    <td><label for="title">Totla Marks</label></td>
+                    <td><label for="title">Total Marks</label></td>
                     <td><label for="title">Created On</label></td>
                     <td><label for="title">Action</label></td>
                 </tr>
@@ -40,6 +41,7 @@
                     <tr>
                         <td>{{ $exam->id }}</td>
                         <td>{{ ucfirst($exam->student->name) }}</td>
+                        <td>{{ ucfirst($exam->term) }}</td>
                         @foreach($subjects as $key => $subject)
                         <td>
                           @foreach($exam->marks as $marks)
